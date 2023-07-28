@@ -5,17 +5,18 @@ import Button from '../../components/atoms/Button/Button';
 import TextInputComponent from '../../components/atoms/TextInput/TextInput';
 import Gap from '../../components/atoms/Gap/Gap';
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
   return (
     <View style={styles.page}>
-      <Header />
+      <Header title={'Sign In'} subTitle={'Find your best meal ever'} />
       <View style={styles.container}>
-        <TextInputComponent />
+        <TextInputComponent label={'Email Address'} placeholder={'Type your email address'} />
         <Gap height={16} />
-        <TextInputComponent />
+        <TextInputComponent label={'Password'} placeholder={'Type your password here'}/>
         <Gap height={24} />
-        <Button />
-        <Button />
+        <Button text={'Sign In'}/>
+        <Gap height={12}/>
+        <Button text={'Create New Account'} color='#8D92A3' textColor='white' onPress={() => navigation.navigate('SignUp')}/>
       </View>
     </View>
   );
