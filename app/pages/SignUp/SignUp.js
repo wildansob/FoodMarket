@@ -15,7 +15,7 @@ const SignUp = ({navigation}) => {
         onBack={() => {}}
       />
       <View style={styles.container}>
-        <TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.7}>
           <View style={styles.wrapper}>
             <View style={styles.borderPhoto}>
               <View style={styles.photoContainer}>
