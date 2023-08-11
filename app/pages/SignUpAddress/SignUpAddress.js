@@ -4,6 +4,7 @@ import Header from '../../components/molecules/Header/Header';
 import TextInputComponent from '../../components/atoms/TextInput/TextInput';
 import Gap from '../../components/atoms/Gap/Gap';
 import Button from '../../components/atoms/Button/Button';
+import Select from '../../components/atoms/Select/Select';
 
 const SignUpAddress = ({navigation}) => {
   return (
@@ -29,10 +30,12 @@ const SignUpAddress = ({navigation}) => {
           label={'House No'}
           placeholder={'Type your Password'}
         />
-        <Gap height={24} />
+        <Gap height={16} />
+        <Select label="City"/>
+        <Gap height={24}/>
         <Button
           text={'Sign Up Now'}
-          onPress={() => navigation.navigate('SignIn')}
+          onPress={() => navigation.replace('SuccessSignUp')}
         />
       </View>
     </View>
